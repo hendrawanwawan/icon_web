@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    /*display: flex; → Bayangkan kamu main tarik-tarikan tangan. Semua isi halaman akan diatur ke tengah.*/
+    justify-content: center;
+    /*justify-content: center; → Menaruh kartu di tengah secara horizontal.*/
+    align-items: center;
+    /*align-items: center; → Menaruh kartu di tengah secara vertikal.*/
+    min-height: 100vh;
+    /*min-height: 100vh; → Supaya halaman selalu setinggi layar penuh.*/
+    background-color: #f3f4f6;
+    /*background-color: #f3f4f6; → Warna latar belakang abu-abu terang.*/
+    font-family: Arial, sans-serif;
+    /*font-family: Arial, sans-serif; → Hurufnya pakai Arial, biar gampang dibaca.*/
+}
+
+.card {
+    background: white;
+    /*background: white; → Warnanya putih, biar bersih.*/
+    padding: 20px;
+    /*padding: 20px; → Ada jarak dari tepi, biar isinya tidak terlalu mepet.*/
+    border-radius: 12px;
+    /*border-radius: 12px; → Sudutnya dibulatkan sedikit, biar keren.*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /*Kasih bayangan halus, biar tampak timbul.*/
+    text-align: center;
+    /*Semua teks di tengah*/
+    width: 300px;
+    /*Lebarnya 300px, pas untuk kartu.*/
+}
+
+.icon {
+    width: 110px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.info {
+    font-size: 14px;
+    color: #666;
+    margin: 3px 0;
+}
+
+
+
