@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lotso Bear Face</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+    }
+    .lotso {
+      position: relative;
+      width: 370px;
+      height: 370px;
+    }
+    .lostso {
+      animation: naikturun 3s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      z-index: 10;
+    }
+    @keyframes naikturun {
+      0% {
+        transform: translateY(-300px) scaleY(1) scaleX(1);
+      }
+      40% {
+        transform: translateY(120px) scaleY(1) scaleX(1);
+      }
+      50% {
+        transform: translateY(150px) scaleY(0.85) scaleX(1.05);
+      }
+      100% {
+        transform: translateY(-300px) scaleY(1) scaleX(1);
+      }
+    }
+    .ear {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 15px solid #e07a9b;
+      background: #fff6fa;
+      top: -60px;
+      z-index: 0;
+      box-shadow: 0 4px 12px rgba(200, 80, 120, 0.10);
+    }
+    .ear.left {
+      top: -30px;
+      left: 18px;
+    }
+    .ear.right {
+      right: 18px;
+      top: -30px;
+    }
+    .face {
+      position: relative;
+      width: 370px;
+      height: 370px;
+      background: #e07a9b;
+      border-radius: 50%;
+      z-index: 1;
+      box-shadow: 0 8px 32px rgba(200, 80, 120, 0.13);
+    }
+    .snout {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px;
+      height: 170px;
+      background: #fff;
+      border-radius: 50% / 60%;
+      z-index: 2;
+      box-shadow: 0 2px 16px rgba(200, 80, 120, 0.10);
+    }
+    .nose {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 80px;
+      background: #5a2320;
+      border-radius: 60% 60% 70% 70% / 70% 70% 100% 100%;
+      z-index: 3;
+    }
+    .eyes {
+      position: absolute;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      z-index: 3;
+      gap: 18px;
+    }
+    .eye {
+      position: relative;
+      width: 54px;
+      height: 70px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(200, 80, 120, 0.08);
+    }
+    .iris {
+      position: relative;
+      width: 36px;
+      height: 36px;
+      background: #5a2320;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pupil {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background: #181818;
+      border-radius: 50%;
+    }
+    .pupil::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 10px;
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    .eyebrows {
+      position: absolute;
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      z-index: 3;
+      gap: 18px;
+    }
+    .eyebrow {
+      width: 70px;
+      height: 20px;
+      background: #5a2320;
+      border-radius: 60% 60% 50% 50% / 80% 80% 60% 60%;
+    }
+    .eyebrow.left {
+      transform: rotate(-13deg) skewX(-8deg);
+    }
+    .eyebrow.right {
+      transform: rotate(13deg) skewX(8deg);
+    }
+    .mouth {
+      position: absolute;
+      bottom: 38px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      height: 60px;
+      border-bottom: 10px solid #a02a4d;
+      border-radius: 0 0 80px 80px;
+      z-index: 3;
+      background: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="lotso lostso">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="face">
+      <div class="snout"></div>
+      <div class="nose"></div>
+      <div class="eyes">
+        <div class="eye">
+          <div class="iris">
+            <div class="pupil"></div>
+          </div>
+        </div>
+        <div class="eye">
+          <div class="iris">
+            <div class="pupil"></div>
+          </div>
+        </div>
+      </div>
+      <div class="eyebrows">
+        <div class="eyebrow left"></div>
+        <div class="eyebrow right"></div>
+      </div>
+      <div class="mouth"></div>
+    </div>
+  </div>
+</body>
+</html>
+
+

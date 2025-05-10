@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lotso Face</title>
+    <style>
+        /* Reset and base */
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+        }
+
+        .face-container {
+            position: relative;
+            width: 360px;
+            height: 360px;
+        }
+
+        .ear {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 17px solid #d4667a;
+            background: white;
+            top: -70px;
+            z-index: 0;
+        }
+
+        .ear.left {
+            top: -40px;
+            left: 20px;
+        }
+
+        .ear.right {
+            right: 20px;
+            top: -40px;
+        }
+
+        .face {
+            position: relative;
+            width: 360px;
+            height: 360px;
+            background: #d4667a;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Muzzle */
+        .muzzle {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 210px;
+            background: white;
+            border-radius: 50% / 60%;
+            z-index: 2;
+        }
+
+        /* Nose */
+        .nose {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 120px;
+            background: #3a0f0a;
+            border-radius: 100%/ 80%;
+            z-index: 3;
+        }
+
+        /* Eyes container */
+        .eyes {
+            position: absolute;
+            top: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            z-index: 3;
+        }
+
+        .eye {
+            position: relative;
+            width: 64px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .iris {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background: #3a0f0a;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pupil {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            background: black;
+            border-radius: 50%;
+        }
+
+        .pupil::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 20px;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        /* Eyebrows */
+        .eyebrows {
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            z-index: 3;
+        }
+
+        .eyebrow {
+            width: 80px;
+            height: 22px;
+            background: #3a0f0a;
+            border-radius: 50%;
+        }
+
+        .eyebrow.left {
+            transform: rotate(-16deg);
+        }
+
+        .eyebrow.right {
+            transform: rotate(16deg);
+        }
+
+        /* Mouth */
+        .mouth {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 170px;
+            height: 80px;
+            border-bottom: 12px solid #6a001a;
+            border-radius: 50%;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="face-container">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+        <div class="face" role="img" aria-label="Lotso bear face cartoon">
+            <div class="muzzle"></div>
+            <div class="nose"></div>
+            <div class="eyes">
+                <div class="eye">
+                    <div class="iris">
+                        <div class="pupil"></div>
+                    </div>
+                </div>
+                <div class="eye">
+                    <div class="iris">
+                        <div class="pupil"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="eyebrows">
+                <div class="eyebrow left"></div>
+                <div class="eyebrow right"></div>
+            </div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+</body>
+
+</html>
